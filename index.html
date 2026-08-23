@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackHorse Barbershop — Преміальні чоловічі стрижки</title>
+    <meta name="description" content="BlackHorse — преміальний барбершоп. Чоловічі стрижки, догляд за бородою, гоління та сервіс найвищого рівня.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>🐴</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+    <nav class="nav">
+        <a href="#" class="nav-logo">BLACK<span>HORSE</span></a>
+        <div class="nav-links" id="nav-links">
+            <a href="#services">Послуги</a>
+            <a href="#team">Майстри</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#reviews">Відгуки</a>
+            <a href="#booking">Запис</a>
+        </div>
+        <a href="#booking" class="nav-cta">Записатися</a>
+        <button class="nav-burger" id="burger" aria-label="Меню"><span></span><span></span></button>
+    </nav>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+    <a href="#services" onclick="closeMob()">Послуги</a>
+    <a href="#team" onclick="closeMob()">Майстри</a>
+    <a href="#gallery" onclick="closeMob()">Галерея</a>
+    <a href="#reviews" onclick="closeMob()">Відгуки</a>
+    <a href="#booking" onclick="closeMob()">Запис</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1400&q=85" alt="BlackHorse Barbershop">
+    </div>
+    <div class="hero-inner">
+        <div class="hero-text" data-reveal>
+            <h1>BLACKHORSE<br><span>BARBERSHOP</span></h1>
+            <p>Преміальні чоловічі стрижки, догляд за бородою та сервіс найвищого рівня.</p>
+            <div class="hero-btns">
+                <a href="#booking" class="btn btn-accent">Записатися онлайн</a>
+                <a href="#gallery" class="btn btn-outline">Переглянути роботи</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+    <div class="sec-header" data-reveal>
+        <span class="sec-label">Послуги</span>
+        <h2>Що ми робимо</h2>
+    </div>
+    <div class="services-grid">
+        <div class="service" data-reveal>
+            <div class="service-price">650 ₴</div>
+            <h3>Чоловіча стрижка</h3>
+            <p>Консультація, мийка, стрижка, укладка. 45 хвилин повної уваги.</p>
+        </div>
+        <div class="service" data-reveal>
+            <div class="service-price">450 ₴</div>
+            <h3>Стрижка бороди</h3>
+            <p>Моделювання форми, тримінг, гарячий рушник, олія для догляду.</p>
+        </div>
+        <div class="service" data-reveal>
+            <div class="service-price">950 ₴</div>
+            <h3>Комплекс</h3>
+            <p>Стрижка + борода + догляд. Повна трансформація за 1.5 години.</p>
+        </div>
+        <div class="service" data-reveal>
+            <div class="service-price">550 ₴</div>
+            <h3>Королівське гоління</h3>
+            <p>Гоління небезпечною бритвою з гарячими рушниками та бальзамом.</p>
+        </div>
+        <div class="service" data-reveal>
+            <div class="service-price">350 ₴</div>
+            <h3>Камуфляж сивини</h3>
+            <p>Натуральне тонування без різкого контрасту. Виглядає як ваш колір.</p>
+        </div>
+        <div class="service" data-reveal>
+            <div class="service-price">250 ₴</div>
+            <h3>Догляд за обличчям</h3>
+            <p>Очищення, скраб, маска. Шкіра виглядає свіжо та доглянуто.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TEAM -->
+<section class="sec sec-dark" id="team">
+    <div class="sec-header" data-reveal>
+        <span class="sec-label">Команда</span>
+        <h2>Наші майстри</h2>
+    </div>
+    <div class="team-grid">
+        <div class="barber" data-reveal>
+            <div class="barber-photo">
+                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80" alt="Артем Чорний" loading="lazy">
+                <div class="barber-overlay">
+                    <span>8 років досвіду</span>
+                    <span>Спеціаліст по фейдах</span>
+                </div>
+            </div>
+            <h3>Артем Чорний</h3>
+            <span class="barber-role">Старший барбер</span>
+        </div>
+        <div class="barber" data-reveal>
+            <div class="barber-photo">
+                <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80" alt="Максим Вовк" loading="lazy">
+                <div class="barber-overlay">
+                    <span>6 років досвіду</span>
+                    <span>Класичні стрижки</span>
+                </div>
+            </div>
+            <h3>Максим Вовк</h3>
+            <span class="barber-role">Барбер · Стиліст</span>
+        </div>
+        <div class="barber" data-reveal>
+            <div class="barber-photo">
+                <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80" alt="Денис Король" loading="lazy">
+                <div class="barber-overlay">
+                    <span>5 років досвіду</span>
+                    <span>Бороди та гоління</span>
+                </div>
+            </div>
+            <h3>Денис Король</h3>
+            <span class="barber-role">Барбер · Бороди</span>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" id="gallery">
+    <div class="sec-header" data-reveal>
+        <span class="sec-label">Роботи</span>
+        <h2>Галерея</h2>
+    </div>
+    <div class="gallery" data-reveal>
+        <div class="gallery-item gallery-item--wide"><img src="https://images.unsplash.com/photo-1585747860036-4cb9a5385e53?w=800&q=80" alt="Стрижка" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=600&q=80" alt="Борода" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80" alt="Процес" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1634480155001-1672d0581e5c?w=600&q=80" alt="Результат" loading="lazy"></div>
+        <div class="gallery-item gallery-item--wide"><img src="https://images.unsplash.com/photo-1521490683712-35a1cb235d1c?w=800&q=80" alt="Інтер'єр" loading="lazy"></div>
+    </div>
+</section>
+
+<!-- BEFORE/AFTER -->
+<section class="sec sec-dark" id="results">
+    <div class="sec-header" data-reveal>
+        <span class="sec-label">Результат</span>
+        <h2>До і після</h2>
+    </div>
+    <div class="ba-container" data-reveal>
+        <div class="ba-card">
+            <div class="ba-images">
+                <div class="ba-side"><img src="https://images.unsplash.com/photo-1599351431613-18ef1fdd27e1?w=500&q=80" alt="До" loading="lazy"><span>До</span></div>
+                <div class="ba-side"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80" alt="Після" loading="lazy"><span>Після</span></div>
+            </div>
+            <p>Класичний фейд + моделювання бороди</p>
+        </div>
+        <div class="ba-card">
+            <div class="ba-images">
+                <div class="ba-side"><img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=500&q=80" alt="До" loading="lazy"><span>До</span></div>
+                <div class="ba-side"><img src="https://images.unsplash.com/photo-1585747860036-4cb9a5385e53?w=500&q=80" alt="Після" loading="lazy"><span>Після</span></div>
+            </div>
+            <p>Текстурний кроп + камуфляж сивини</p>
+        </div>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec" id="reviews">
+    <div class="sec-header" data-reveal>
+        <span class="sec-label">Відгуки</span>
+        <h2>Що кажуть клієнти</h2>
+    </div>
+    <div class="reviews" data-reveal>
+        <blockquote class="review">
+            <p>"Хожу вже два роки. Єдине місце де не потрібно пояснювати що хочеш — вони розуміють з першого разу."</p>
+            <cite>Олексій М. · Постійний клієнт</cite>
+        </blockquote>
+        <blockquote class="review">
+            <p>"Атмосфера, віскі, музика — це не просто стрижка, це ритуал. Після BlackHorse в інше місце не тягне."</p>
+            <cite>Дмитро К. · 1 рік з нами</cite>
+        </blockquote>
+        <blockquote class="review">
+            <p>"Привів батька на гоління небезпечною бритвою. Тепер він ходить сам кожні два тижні. Рекомендую."</p>
+            <cite>Ігор В. · Рекомендація</cite>
+        </blockquote>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec-dark" id="faq">
+    <div class="sec-header" data-reveal>
+        <span class="sec-label">FAQ</span>
+        <h2>Питання</h2>
+    </div>
+    <div class="faq" data-reveal>
+        <details class="faq-item"><summary>Чи потрібно записуватися заздалегідь?</summary><p>Так, ми працюємо тільки за записом. Це гарантує що майстер приділить вам максимум часу без поспіху.</p></details>
+        <details class="faq-item"><summary>Скільки часу займає стрижка?</summary><p>Стрижка — 45 хвилин. Комплекс (стрижка + борода) — 1.5 години. Ми не поспішаємо.</p></details>
+        <details class="faq-item"><summary>Чи можна прийти без запису?</summary><p>Якщо є вільне вікно — так. Але рекомендуємо записуватися, щоб гарантовано отримати час у свого майстра.</p></details>
+        <details class="faq-item"><summary>Які способи оплати?</summary><p>Готівка, картка, Apple Pay, Google Pay. Оплата після послуги.</p></details>
+        <details class="faq-item"><summary>Чи працюєте з дітьми?</summary><p>Так, приймаємо хлопців від 6 років. Дитяча стрижка — 400 ₴.</p></details>
+    </div>
+</section>
+
+<!-- BOOKING -->
+<section class="sec" id="booking">
+    <div class="sec-header" data-reveal>
+        <span class="sec-label">Запис</span>
+        <h2>Записатися онлайн</h2>
+    </div>
+    <div class="booking" data-reveal>
+        <form class="booking-form" id="booking-form">
+            <input type="text" name="name" placeholder="Ваше ім'я" required>
+            <input type="tel" name="phone" placeholder="+380 __ ___ __ __" required>
+            <select name="service" required>
+                <option value="" disabled selected>Оберіть послугу</option>
+                <option>Чоловіча стрижка — 650 ₴</option>
+                <option>Стрижка бороди — 450 ₴</option>
+                <option>Комплекс — 950 ₴</option>
+                <option>Королівське гоління — 550 ₴</option>
+                <option>Камуфляж сивини — 350 ₴</option>
+                <option>Догляд за обличчям — 250 ₴</option>
+            </select>
+            <select name="barber">
+                <option value="" disabled selected>Оберіть майстра</option>
+                <option>Артем Чорний</option>
+                <option>Максим Вовк</option>
+                <option>Денис Король</option>
+                <option>Будь-який вільний</option>
+            </select>
+            <button type="submit" class="btn btn-accent btn-full">Записатися</button>
+        </form>
+        <div class="booking-info">
+            <div class="booking-item"><span class="booking-label">Адреса</span><span>вул. Саксаганського, 42, Київ</span></div>
+            <div class="booking-item"><span class="booking-label">Телефон</span><a href="tel:+380441234567">+38 (044) 123-45-67</a></div>
+            <div class="booking-item"><span class="booking-label">Графік</span><span>Пн–Нд: 10:00 – 21:00</span></div>
+            <div class="booking-item"><span class="booking-label">Instagram</span><a href="#">@blackhorse.kyiv</a></div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+        <a href="#" class="nav-logo">BLACK<span>HORSE</span></a>
+        <p>© 2026 BlackHorse Barbershop. Демонстраційний проєкт.</p>
+        <p class="footer-credit">Розробка: <a href="https://t.me/MarkoStepaniuk" target="_blank">MarkLabs Agency</a></p>
+    </div>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
+window.addEventListener('scroll',function(){document.getElementById('header').classList.toggle('scrolled',scrollY>50);});
+var burger=document.getElementById('burger'),mob=document.getElementById('mobile-nav');
+burger.onclick=function(){burger.classList.toggle('on');mob.classList.toggle('on');document.body.style.overflow=mob.classList.contains('on')?'hidden':'';};
+function closeMob(){burger.classList.remove('on');mob.classList.remove('on');document.body.style.overflow='';}
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('[data-reveal]').forEach(function(el){obs.observe(el);});
+document.getElementById('booking-form').onsubmit=function(e){e.preventDefault();var btn=this.querySelector('button');btn.textContent='✓ Записано! Зателефонуємо.';btn.disabled=true;btn.style.opacity='0.7';};
+</script>
+</body>
+</html>
