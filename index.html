@@ -44,14 +44,41 @@
     <div class="hero-inner">
         <div class="hero-text" data-reveal>
             <h1>BLACKHORSE<br><span>BARBERSHOP</span></h1>
-            <p>Преміальні чоловічі стрижки, догляд за бородою та сервіс найвищого рівня.</p>
-            <div class="hero-btns">
-                <a href="#booking" class="btn btn-accent">Записатися онлайн</a>
-                <a href="#gallery" class="btn btn-outline">Переглянути роботи</a>
-            </div>
+            <p>Преміальні чоловічі стрижки та сервіс найвищого рівня.</p>
+            <a href="#booking" class="btn btn-accent">Записатися</a>
         </div>
     </div>
 </section>
+
+<!-- BEFORE/AFTER — WOW feature -->
+<section class="sec sec-ba">
+    <div class="ba-hero" data-reveal>
+        <div class="ba-slider" id="ba-main">
+            <div class="ba-slider__before">
+                <img src="https://images.unsplash.com/photo-1599351431613-18ef1fdd27e1?w=900&q=85" alt="До">
+            </div>
+            <div class="ba-slider__after">
+                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=900&q=85" alt="Після">
+            </div>
+            <div class="ba-slider__handle">
+                <div class="ba-slider__line"></div>
+                <div class="ba-slider__circle">⟷</div>
+                <div class="ba-slider__line"></div>
+            </div>
+            <span class="ba-slider__label ba-slider__label--before">До</span>
+            <span class="ba-slider__label ba-slider__label--after">Після</span>
+        </div>
+        <p class="ba-caption">Перетягніть повзунок для порівняння</p>
+    </div>
+    <div class="stats" data-reveal>
+        <div class="stat"><span class="stat-num">5000+</span><span class="stat-label">Стрижок</span></div>
+        <div class="stat"><span class="stat-num">4.9</span><span class="stat-label">Рейтинг</span></div>
+        <div class="stat"><span class="stat-num">5</span><span class="stat-label">Років досвіду</span></div>
+    </div>
+</section>
+
+<!-- FLOATING CTA -->
+<a href="#booking" class="floating-cta" id="floating-cta">Записатися</a>
 
 <!-- SERVICES -->
 <section class="sec" id="services">
@@ -267,6 +294,27 @@ function closeMob(){burger.classList.remove('on');mob.classList.remove('on');doc
 var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('[data-reveal]').forEach(function(el){obs.observe(el);});
 document.getElementById('booking-form').onsubmit=function(e){e.preventDefault();var btn=this.querySelector('button');btn.textContent='✓ Записано! Зателефонуємо.';btn.disabled=true;btn.style.opacity='0.7';};
+
+// Before/After Slider
+(function(){
+var slider=document.getElementById('ba-main');
+if(!slider)return;
+var handle=slider.querySelector('.ba-slider__handle');
+var after=slider.querySelector('.ba-slider__after');
+var dragging=false;
+function setPos(x){var r=slider.getBoundingClientRect();var p=Math.max(0,Math.min(1,(x-r.left)/r.width));handle.style.left=(p*100)+'%';after.style.clipPath='inset(0 0 0 '+(p*100)+'%)';}
+after.style.clipPath='inset(0 0 0 50%)';handle.style.left='50%';
+slider.addEventListener('mousedown',function(e){dragging=true;setPos(e.clientX);});
+window.addEventListener('mousemove',function(e){if(dragging)setPos(e.clientX);});
+window.addEventListener('mouseup',function(){dragging=false;});
+slider.addEventListener('touchstart',function(e){dragging=true;setPos(e.touches[0].clientX);},{passive:true});
+window.addEventListener('touchmove',function(e){if(dragging)setPos(e.touches[0].clientX);},{passive:true});
+window.addEventListener('touchend',function(){dragging=false;});
+})();
+
+// Floating CTA
+var floatingCta=document.getElementById('floating-cta');
+window.addEventListener('scroll',function(){floatingCta.classList.toggle('show',scrollY>600);});
 </script>
 </body>
 </html>
