@@ -146,50 +146,106 @@ body{font-family:var(--font-body);background:var(--black);color:var(--white);lin
 @media(max-width:1024px){
     .services-grid{grid-template-columns:repeat(2,1fr)}
     .team-grid{grid-template-columns:repeat(2,1fr)}
-    .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:220px}
+    .gallery--magazine{grid-template-columns:repeat(2,1fr);grid-auto-rows:220px}
+    .gallery--magazine .gallery-item--hero{grid-column:span 2;grid-row:span 1}
+    .gallery--magazine .gallery-item--tall{grid-row:span 1}
     .ba-container{grid-template-columns:1fr}
     .reviews{grid-template-columns:1fr}
     .booking{grid-template-columns:1fr;gap:3rem}
 }
+
+/* === MOBILE-FIRST: 768px === */
 @media(max-width:768px){
+    /* Nav */
     .nav-links,.nav-cta{display:none}
     .nav-burger{display:block}
-    .nav{padding:0 1.25rem}
-    .hero{min-height:90vh}
-    .hero-inner{padding:0 1.25rem 4rem}
-    .hero-text h1{font-size:2.2rem}
-    .hero-eyebrow{font-size:0.62rem;margin-bottom:1rem}
-    .hero-sub{font-size:0.9rem}
-    .hero-metrics{gap:1rem;flex-wrap:wrap}
-    .hero-metrics span{font-size:0.65rem}
-    .hero-btns{flex-direction:column}
-    .hero-btns .btn{width:100%;text-align:center}
-    .sec{padding:4.5rem 1.25rem}
-    .sec-dark{padding:4.5rem 1.25rem}
-    .sec-header{margin-bottom:2.5rem}
-    .services-grid{grid-template-columns:1fr;gap:0;border:1px solid var(--border)}
-    .service{padding:2rem 1.5rem;border-bottom:1px solid var(--border)}
-    .service:last-child{border-bottom:none}
-    .team-grid{grid-template-columns:1fr;gap:2.5rem}
-    .barber-photo{aspect-ratio:1;max-height:360px}
-    .gallery--magazine{grid-template-columns:1fr 1fr;grid-auto-rows:200px}
-    .gallery--magazine .gallery-item--hero{grid-column:span 2;grid-row:span 1}
+    .nav{padding:0 1rem}
+
+    /* HERO — fullscreen photo, content bottom */
+    .hero{min-height:100vh;min-height:100dvh}
+    .hero-bg img{object-position:top center}
+    .hero-inner{padding:0 1.25rem 3.5rem}
+    .hero-text{max-width:100%}
+    .hero-eyebrow{font-size:0.6rem;letter-spacing:0.2em;margin-bottom:0.75rem}
+    .hero-text h1{font-size:2rem;line-height:1.1;margin-bottom:0.75rem}
+    .hero-sub{font-size:0.88rem;margin-bottom:1.5rem;max-width:100%;color:rgba(255,255,255,0.6)}
+    .hero-text .btn{width:100%;min-height:48px;font-size:0.82rem;padding:0.9rem 1.5rem}
+    .hero-metrics{gap:0;justify-content:space-between;margin-top:1.5rem;padding-top:1.25rem}
+    .hero-metrics span{font-size:0.62rem}
+
+    /* Sections — tighter */
+    .sec{padding:3rem 1rem}
+    .sec-dark{padding:3rem 1rem}
+    .sec-header{margin-bottom:2rem}
+    .sec-header h2{font-size:1.6rem}
+
+    /* Services — stacked list */
+    .services-grid{grid-template-columns:1fr;gap:0;border:1px solid var(--border);background:var(--border)}
+    .service{padding:1.5rem 1.25rem;border-bottom:none;background:var(--black)}
+    .service-price{font-size:1.25rem}
+    .service h3{font-size:0.92rem}
+    .service p{font-size:0.8rem}
+
+    /* Team */
+    .team-grid{grid-template-columns:1fr;gap:2rem}
+    .barber-photo{aspect-ratio:3/4;max-height:380px}
+
+    /* Gallery */
+    .gallery--magazine{grid-template-columns:1fr 1fr;grid-auto-rows:180px;gap:3px}
+    .gallery--magazine .gallery-item--hero{grid-column:span 2}
     .gallery--magazine .gallery-item--tall{grid-row:span 1}
-    .review{padding:1.75rem}
-    .review p{font-size:0.92rem}
-    .footer-inner{flex-direction:column;text-align:center}
+
+    /* BA */
+    .ba-hero{padding:2.5rem 1rem 1.5rem}
+    .ba-slider{aspect-ratio:4/3}
+    .ba-slider__circle{width:40px;height:40px;font-size:0.85rem}
+    .ba-slider__label{font-size:0.55rem;padding:0.25rem 0.5rem}
+
+    /* Stats */
+    .stats{gap:0;justify-content:space-between;padding:2rem 1rem}
+    .stat-num{font-size:1.75rem}
+    .stat-label{font-size:0.6rem}
+
+    /* Reviews */
+    .review{padding:1.5rem}
+    .review p{font-size:0.9rem}
+    .review cite{font-size:0.7rem}
+
+    /* FAQ */
+    .faq-item summary{padding:1.25rem 0;font-size:0.88rem}
+    .faq-item p{font-size:0.82rem}
+
+    /* Booking */
+    .booking-form input,.booking-form select{padding:0.9rem 1rem;font-size:0.88rem;min-height:48px}
+    .booking-form .btn{min-height:48px}
+    .booking-info{gap:1.5rem}
+    .booking-item span,.booking-item a{font-size:0.92rem}
+
+    /* Floating CTA */
+    .floating-cta{bottom:1rem;right:1rem;left:1rem;text-align:center;padding:0.85rem;font-size:0.75rem}
+
+    /* Footer */
+    .footer-inner{flex-direction:column;text-align:center;gap:0.5rem}
+    .footer{padding:2rem 1rem}
+
+    /* Global: prevent overflow */
+    html,body{overflow-x:hidden}
 }
+
+/* === SMALL MOBILE: 390px === */
 @media(max-width:390px){
-    .hero-text h1{font-size:1.9rem}
-    .hero-eyebrow{font-size:0.58rem}
-    .sec{padding:3.5rem 1rem}
-    .sec-dark{padding:3.5rem 1rem}
-    .sec-header h2{font-size:1.7rem}
-    .service{padding:1.5rem 1.25rem}
-    .gallery--magazine{grid-auto-rows:150px}
-    .btn{padding:0.9rem 2rem;font-size:0.78rem}
-    .stats{gap:1.5rem}
-    .stat-num{font-size:1.6rem}
+    .hero-text h1{font-size:1.75rem}
+    .hero-eyebrow{font-size:0.55rem}
+    .hero-sub{font-size:0.82rem}
+    .hero-metrics span{font-size:0.58rem}
+    .sec{padding:2.5rem 0.85rem}
+    .sec-dark{padding:2.5rem 0.85rem}
+    .sec-header h2{font-size:1.4rem}
+    .service{padding:1.25rem 1rem}
+    .gallery--magazine{grid-auto-rows:140px}
+    .btn{padding:0.85rem 1.5rem;font-size:0.78rem;min-height:48px}
+    .stats{padding:1.5rem 0.85rem}
+    .stat-num{font-size:1.4rem}
     .ba-slider{aspect-ratio:1}
 }
 
@@ -220,17 +276,4 @@ body{font-family:var(--font-body);background:var(--black);color:var(--white);lin
 .floating-cta.show{opacity:1;transform:translateY(0);pointer-events:auto}
 .floating-cta:hover{background:var(--bronze-light)}
 
-/* Mobile adjustments for new elements */
-@media(max-width:768px){
-    .ba-hero{padding:3rem 1.25rem 1.5rem}
-    .ba-slider{aspect-ratio:4/3}
-    .ba-slider__circle{width:40px;height:40px;font-size:0.9rem}
-    .stats{gap:2rem;flex-wrap:wrap;padding:2rem 1.25rem}
-    .stat-num{font-size:2rem}
-    .floating-cta{bottom:1.25rem;right:1.25rem;padding:0.75rem 1.5rem;font-size:0.72rem}
-}
-@media(max-width:390px){
-    .stats{gap:1.5rem}
-    .stat-num{font-size:1.6rem}
-    .ba-slider{aspect-ratio:1}
-}
+/* Mobile adjustments for BA/floating (already handled above) */
