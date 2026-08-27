@@ -2,325 +2,492 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlackHorse Barbershop — Преміальні чоловічі стрижки</title>
-    <meta name="description" content="BlackHorse — преміальний барбершоп. Чоловічі стрижки, догляд за бородою, гоління та сервіс найвищого рівня.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>🐴</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>BlackHorse — Men's Club</title>
+    <meta name="description" content="BlackHorse — приватний чоловічий клуб. Стиль, статус, впевненість. Не барбершоп — lifestyle.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>♞</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
 
 <header class="header" id="header">
     <nav class="nav">
-        <a href="#" class="nav-logo">BLACK<span>HORSE</span></a>
-        <div class="nav-links" id="nav-links">
-            <a href="#services">Послуги</a>
-            <a href="#team">Майстри</a>
-            <a href="#gallery">Галерея</a>
-            <a href="#reviews">Відгуки</a>
-            <a href="#booking">Запис</a>
+        <a href="#" class="nav__logo">BLACK<span>HORSE</span></a>
+        <div class="nav__links">
+            <a href="#style">Style Match</a>
+            <a href="#transformation">Transformation</a>
+            <a href="#brotherhood">Brotherhood</a>
+            <a href="#ritual">Ritual</a>
+            <a href="#booking">Booking</a>
         </div>
-        <a href="#booking" class="nav-cta">Записатися</a>
-        <button class="nav-burger" id="burger" aria-label="Меню"><span></span><span></span></button>
+        <a href="#booking" class="nav__cta">Reserve</a>
+        <button class="nav__burger" id="burger" aria-label="Menu">
+            <span></span><span></span>
+        </button>
     </nav>
 </header>
 
-<div class="mobile-nav" id="mobile-nav">
-    <a href="#services" onclick="closeMob()">Послуги</a>
-    <a href="#team" onclick="closeMob()">Майстри</a>
-    <a href="#gallery" onclick="closeMob()">Галерея</a>
-    <a href="#reviews" onclick="closeMob()">Відгуки</a>
-    <a href="#booking" onclick="closeMob()">Запис</a>
+<div class="mobile-menu" id="mobile-menu">
+    <a href="#style" onclick="closeMenu()">Style Match</a>
+    <a href="#transformation" onclick="closeMenu()">Transformation</a>
+    <a href="#brotherhood" onclick="closeMenu()">Brotherhood</a>
+    <a href="#ritual" onclick="closeMenu()">Ritual</a>
+    <a href="#booking" onclick="closeMenu()">Reserve a Chair</a>
 </div>
 
-<!-- HERO -->
+<!-- ===== HERO: CINEMATIC ===== -->
 <section class="hero">
-    <div class="hero-bg">
-        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=1600&q=90" alt="Преміальна чоловіча стрижка">
+    <div class="hero__bg">
+        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665571?w=1920&q=85" alt="Man with perfect style" class="hero__bg-img">
+        <div class="hero__overlay"></div>
     </div>
-    <div class="hero-inner">
-        <div class="hero-text" data-reveal>
-            <p class="hero-eyebrow">BLACKHORSE BARBERSHOP</p>
-            <h1>Стиль, який<br>помічають</h1>
-            <p class="hero-sub">Преміальні чоловічі стрижки та догляд за бородою у Вінниці.</p>
-            <a href="#booking" class="btn btn-accent">Записатися онлайн</a>
-            <div class="hero-metrics">
-                <span>★ 4.9 рейтинг</span>
-                <span>3000+ клієнтів</span>
-                <span>5 років досвіду</span>
+    <div class="hero__content" data-reveal>
+        <span class="hero__tagline">Men's Club Est. 2018</span>
+        <h1 class="hero__title">YOUR<br>STYLE.<br><span>YOUR RULES.</span></h1>
+        <a href="#style" class="hero__cta-btn">Знайди свій стиль</a>
+    </div>
+    <div class="hero__scroll">
+        <div class="hero__scroll-line"></div>
+    </div>
+</section>
+
+<!-- ===== STYLE MATCH — MAIN FEATURE ===== -->
+<section class="section" id="style">
+    <div class="section__header" data-reveal>
+        <span class="section__tag">Головна фішка</span>
+        <h2 class="section__title">Який стиль<br>підходить тобі?</h2>
+        <p class="section__sub">Обери характер — отримай рекомендацію</p>
+    </div>
+    <div class="style-match" data-reveal>
+        <div class="style-match__options" id="style-options">
+            <button class="style-option active" data-style="0">
+                <span class="style-option__name">Executive</span>
+                <span class="style-option__desc">Влада та контроль</span>
+            </button>
+            <button class="style-option" data-style="1">
+                <span class="style-option__name">Classic Gentleman</span>
+                <span class="style-option__desc">Елегантність та традиції</span>
+            </button>
+            <button class="style-option" data-style="2">
+                <span class="style-option__name">Modern Fade</span>
+                <span class="style-option__desc">Сучасність та чіткість</span>
+            </button>
+            <button class="style-option" data-style="3">
+                <span class="style-option__name">Creative</span>
+                <span class="style-option__desc">Сміливість та індивідуальність</span>
+            </button>
+            <button class="style-option" data-style="4">
+                <span class="style-option__name">Beard Authority</span>
+                <span class="style-option__desc">Мужність та характер</span>
+            </button>
+        </div>
+        <div class="style-match__preview">
+            <div class="style-match__image" id="style-image">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80" alt="Executive style" id="style-img">
+                <div class="style-match__badge" id="style-badge">Executive</div>
+            </div>
+            <div class="style-match__details" id="style-details">
+                <h3 id="style-detail-title">Executive</h3>
+                <p id="style-detail-desc">Класичний короткий крій з ідеальною укладкою. Для чоловіків, які керують процесами. Чіткі лінії, бездоганна форма, мінімум зайвого.</p>
+                <div class="style-match__traits">
+                    <span class="style-trait">Короткий крій</span>
+                    <span class="style-trait">Бічний пробір</span>
+                    <span class="style-trait">Чіткі контури</span>
+                </div>
+                <a href="#booking" class="btn btn--accent">Обрати цей стиль</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- BEFORE/AFTER — WOW feature -->
-<section class="sec sec-ba">
-    <div class="ba-hero" data-reveal>
-        <div class="ba-slider" id="ba-main">
-            <div class="ba-slider__before">
-                <img src="https://images.unsplash.com/photo-1599351431613-18ef1fdd27e1?w=1000&q=85" alt="До">
+<!-- ===== TRANSFORMATION GALLERY ===== -->
+<section class="section section--dark" id="transformation">
+    <div class="section__header" data-reveal>
+        <span class="section__tag section__tag--gold">Трансформація</span>
+        <h2 class="section__title">Не стрижка.<br>Перевтілення.</h2>
+        <p class="section__sub">Дивись, як змінюється не лише волосся — змінюється враження</p>
+    </div>
+    <div class="transformations" data-reveal>
+        <div class="transform-card">
+            <div class="transform-card__slider" data-ba>
+                <div class="transform-card__before">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80" alt="Before transformation" loading="lazy">
+                    <span class="transform-card__label">Before</span>
+                </div>
+                <div class="transform-card__after">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="After transformation" loading="lazy">
+                    <span class="transform-card__label transform-card__label--after">After</span>
+                </div>
+                <div class="transform-card__handle">
+                    <div class="transform-card__handle-line"></div>
+                    <div class="transform-card__handle-dot"></div>
+                    <div class="transform-card__handle-line"></div>
+                </div>
             </div>
-            <div class="ba-slider__after">
-                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1000&q=85" alt="Після">
+            <div class="transform-card__info">
+                <span class="transform-card__tag">Executive → Modern Fade</span>
+                <p>"Із звичайного менеджера — в людину, якій довіряють з першого погляду"</p>
             </div>
-            <div class="ba-slider__handle">
-                <div class="ba-slider__line"></div>
-                <div class="ba-slider__circle">⟷</div>
-                <div class="ba-slider__line"></div>
+        </div>
+        <div class="transform-card">
+            <div class="transform-card__slider" data-ba>
+                <div class="transform-card__before">
+                    <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=600&q=80" alt="Before transformation" loading="lazy">
+                    <span class="transform-card__label">Before</span>
+                </div>
+                <div class="transform-card__after">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80" alt="After transformation" loading="lazy">
+                    <span class="transform-card__label transform-card__label--after">After</span>
+                </div>
+                <div class="transform-card__handle">
+                    <div class="transform-card__handle-line"></div>
+                    <div class="transform-card__handle-dot"></div>
+                    <div class="transform-card__handle-line"></div>
+                </div>
             </div>
-            <span class="ba-slider__label ba-slider__label--before">До</span>
-            <span class="ba-slider__label ba-slider__label--after">Після</span>
+            <div class="transform-card__info">
+                <span class="transform-card__tag">Beard Authority</span>
+                <p>"Борода — не просто волосся. Це заява: я знаю, хто я"</p>
+            </div>
+        </div>
+        <div class="transform-card">
+            <div class="transform-card__slider" data-ba>
+                <div class="transform-card__before">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80" alt="Before transformation" loading="lazy">
+                    <span class="transform-card__label">Before</span>
+                </div>
+                <div class="transform-card__after">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80" alt="After transformation" loading="lazy">
+                    <span class="transform-card__label transform-card__label--after">After</span>
+                </div>
+                <div class="transform-card__handle">
+                    <div class="transform-card__handle-line"></div>
+                    <div class="transform-card__handle-dot"></div>
+                    <div class="transform-card__handle-line"></div>
+                </div>
+            </div>
+            <div class="transform-card__info">
+                <span class="transform-card__tag">Classic Gentleman</span>
+                <p>"Стиль, який не кричить — але всі помічають"</p>
+            </div>
         </div>
     </div>
+</section>
+
+<!-- ===== BROTHERHOOD ===== -->
+<section class="section" id="brotherhood">
+    <div class="section__header" data-reveal>
+        <span class="section__tag">Атмосфера</span>
+        <h2 class="section__title">Brotherhood</h2>
+        <p class="section__sub">Це не салон. Це місце, де хочеться бути.</p>
+    </div>
+    <div class="brotherhood" data-reveal>
+        <div class="brotherhood__grid">
+            <div class="brotherhood__item brotherhood__item--wide">
+                <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?w=800&q=80" alt="Premium interior" loading="lazy">
+                <div class="brotherhood__overlay">
+                    <span>Інтер'єр, натхненний приватними клубами Лондона</span>
+                </div>
+            </div>
+            <div class="brotherhood__item">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600&q=80" alt="Whiskey selection" loading="lazy">
+                <div class="brotherhood__overlay">
+                    <span>Авторський віскі-бар</span>
+                </div>
+            </div>
+            <div class="brotherhood__item">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80" alt="Specialty coffee" loading="lazy">
+                <div class="brotherhood__overlay">
+                    <span>Specialty coffee від шефа</span>
+                </div>
+            </div>
+            <div class="brotherhood__item brotherhood__item--wide">
+                <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=800&q=80" alt="Men's club atmosphere" loading="lazy">
+                <div class="brotherhood__overlay">
+                    <span>Нетворкінг, який трапляється сам собою</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SIGNATURE RITUAL ===== -->
+<section class="section section--dark" id="ritual">
+    <div class="section__header" data-reveal>
+        <span class="section__tag section__tag--gold">Ритуал</span>
+        <h2 class="section__title">The Signature Ritual</h2>
+        <p class="section__sub">Не послуга. Досвід.</p>
+    </div>
+    <div class="ritual" data-reveal>
+        <div class="ritual__step">
+            <span class="ritual__num">I</span>
+            <div class="ritual__content">
+                <h3>Welcome</h3>
+                <p>Гарячий рушник, кава або віскі. Перші хвилини — вже релакс.</p>
+            </div>
+        </div>
+        <div class="ritual__step">
+            <span class="ritual__num">II</span>
+            <div class="ritual__content">
+                <h3>Consultation</h3>
+                <p>Аналіз форми обличчя, типу волосся, стилю життя. Підбір образу.</p>
+            </div>
+        </div>
+        <div class="ritual__step">
+            <span class="ritual__num">III</span>
+            <div class="ritual__content">
+                <h3>Haircut</h3>
+                <p>Precision cutting. Кожен рух — продуманий. Ніякого поспіху.</p>
+            </div>
+        </div>
+        <div class="ritual__step">
+            <span class="ritual__num">IV</span>
+            <div class="ritual__content">
+                <h3>Beard Design</h3>
+                <p>Контурінг бороди, hot towel shave, масло преміум-класу.</p>
+            </div>
+        </div>
+        <div class="ritual__step">
+            <span class="ritual__num">V</span>
+            <div class="ritual__content">
+                <h3>Styling</h3>
+                <p>Фінішна укладка продуктами, підібраними індивідуально.</p>
+            </div>
+        </div>
+        <div class="ritual__step">
+            <span class="ritual__num">VI</span>
+            <div class="ritual__content">
+                <h3>Final Look</h3>
+                <p>Момент, коли дивишся в дзеркало — і бачиш найкращу версію себе.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats-section">
     <div class="stats" data-reveal>
-        <div class="stat"><span class="stat-num">5000+</span><span class="stat-label">Стрижок</span></div>
-        <div class="stat"><span class="stat-num">4.9</span><span class="stat-label">Рейтинг</span></div>
-        <div class="stat"><span class="stat-num">5</span><span class="stat-label">Років досвіду</span></div>
-    </div>
-</section>
-
-<!-- FLOATING CTA -->
-<a href="#booking" class="floating-cta" id="floating-cta">Записатися</a>
-
-<!-- SERVICES -->
-<section class="sec" id="services">
-    <div class="sec-header" data-reveal>
-        <span class="sec-label">Послуги</span>
-        <h2>Що ми робимо</h2>
-    </div>
-    <div class="services-grid">
-        <div class="service" data-reveal>
-            <div class="service-price">650 ₴</div>
-            <h3>Чоловіча стрижка</h3>
-            <p>Консультація, мийка, стрижка, укладка. 45 хвилин повної уваги.</p>
+        <div class="stat">
+            <span class="stat__value" data-count="12000">0</span><span class="stat__suffix">+</span>
+            <span class="stat__label">клієнтів довіряють нам</span>
         </div>
-        <div class="service" data-reveal>
-            <div class="service-price">450 ₴</div>
-            <h3>Стрижка бороди</h3>
-            <p>Моделювання форми, тримінг, гарячий рушник, олія для догляду.</p>
+        <div class="stat">
+            <span class="stat__value" data-count="49">0</span><span class="stat__suffix">/5</span>
+            <span class="stat__label">рейтинг Google</span>
         </div>
-        <div class="service" data-reveal>
-            <div class="service-price">950 ₴</div>
-            <h3>Комплекс</h3>
-            <p>Стрижка + борода + догляд. Повна трансформація за 1.5 години.</p>
+        <div class="stat">
+            <span class="stat__value" data-count="87">0</span><span class="stat__suffix">%</span>
+            <span class="stat__label">повертаються</span>
         </div>
-        <div class="service" data-reveal>
-            <div class="service-price">550 ₴</div>
-            <h3>Королівське гоління</h3>
-            <p>Гоління небезпечною бритвою з гарячими рушниками та бальзамом.</p>
-        </div>
-        <div class="service" data-reveal>
-            <div class="service-price">350 ₴</div>
-            <h3>Камуфляж сивини</h3>
-            <p>Натуральне тонування без різкого контрасту. Виглядає як ваш колір.</p>
-        </div>
-        <div class="service" data-reveal>
-            <div class="service-price">250 ₴</div>
-            <h3>Догляд за обличчям</h3>
-            <p>Очищення, скраб, маска. Шкіра виглядає свіжо та доглянуто.</p>
+        <div class="stat">
+            <span class="stat__value" data-count="8">0</span><span class="stat__suffix"> років</span>
+            <span class="stat__label">досвіду команди</span>
         </div>
     </div>
 </section>
 
-<!-- TEAM -->
-<section class="sec sec-dark" id="team">
-    <div class="sec-header" data-reveal>
-        <span class="sec-label">Команда</span>
-        <h2>Наші майстри</h2>
-    </div>
-    <div class="team-grid">
-        <div class="barber" data-reveal>
-            <div class="barber-photo">
-                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80" alt="Артем Чорний" loading="lazy">
-                <div class="barber-overlay">
-                    <span>8 років досвіду</span>
-                    <span>Спеціаліст по фейдах</span>
-                </div>
-            </div>
-            <h3>Артем Чорний</h3>
-            <span class="barber-role">Старший барбер</span>
-        </div>
-        <div class="barber" data-reveal>
-            <div class="barber-photo">
-                <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80" alt="Максим Вовк" loading="lazy">
-                <div class="barber-overlay">
-                    <span>6 років досвіду</span>
-                    <span>Класичні стрижки</span>
-                </div>
-            </div>
-            <h3>Максим Вовк</h3>
-            <span class="barber-role">Барбер · Стиліст</span>
-        </div>
-        <div class="barber" data-reveal>
-            <div class="barber-photo">
-                <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80" alt="Денис Король" loading="lazy">
-                <div class="barber-overlay">
-                    <span>5 років досвіду</span>
-                    <span>Бороди та гоління</span>
-                </div>
-            </div>
-            <h3>Денис Король</h3>
-            <span class="barber-role">Барбер · Бороди</span>
-        </div>
-    </div>
-</section>
-
-<!-- GALLERY -->
-<section class="sec" id="gallery">
-    <div class="sec-header" data-reveal>
-        <span class="sec-label">Роботи</span>
-        <h2>Галерея</h2>
-    </div>
-    <div class="gallery gallery--magazine" data-reveal>
-        <div class="gallery-item gallery-item--hero"><img src="https://images.unsplash.com/photo-1585747860036-4cb9a5385e53?w=1000&q=85" alt="Стрижка" loading="lazy"></div>
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=600&q=80" alt="Борода" loading="lazy"></div>
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80" alt="Процес" loading="lazy"></div>
-        <div class="gallery-item gallery-item--tall"><img src="https://images.unsplash.com/photo-1634480155001-1672d0581e5c?w=600&q=85" alt="Результат" loading="lazy"></div>
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80" alt="Атмосфера" loading="lazy"></div>
-        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1521490683712-35a1cb235d1c?w=600&q=80" alt="Інтер'єр" loading="lazy"></div>
-    </div>
-</section>
-
-<!-- BEFORE/AFTER -->
-<section class="sec sec-dark" id="results">
-    <div class="sec-header" data-reveal>
-        <span class="sec-label">Результат</span>
-        <h2>До і після</h2>
-    </div>
-    <div class="ba-container" data-reveal>
-        <div class="ba-card">
-            <div class="ba-images">
-                <div class="ba-side"><img src="https://images.unsplash.com/photo-1599351431613-18ef1fdd27e1?w=500&q=80" alt="До" loading="lazy"><span>До</span></div>
-                <div class="ba-side"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80" alt="Після" loading="lazy"><span>Після</span></div>
-            </div>
-            <p>Класичний фейд + моделювання бороди</p>
-        </div>
-        <div class="ba-card">
-            <div class="ba-images">
-                <div class="ba-side"><img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=500&q=80" alt="До" loading="lazy"><span>До</span></div>
-                <div class="ba-side"><img src="https://images.unsplash.com/photo-1585747860036-4cb9a5385e53?w=500&q=80" alt="Після" loading="lazy"><span>Після</span></div>
-            </div>
-            <p>Текстурний кроп + камуфляж сивини</p>
-        </div>
-    </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="sec" id="reviews">
-    <div class="sec-header" data-reveal>
-        <span class="sec-label">Відгуки</span>
-        <h2>Що кажуть клієнти</h2>
-    </div>
-    <div class="reviews" data-reveal>
-        <blockquote class="review">
-            <p>"Хожу вже два роки. Єдине місце де не потрібно пояснювати що хочеш — вони розуміють з першого разу."</p>
-            <cite>Олексій М. · Постійний клієнт</cite>
-        </blockquote>
-        <blockquote class="review">
-            <p>"Атмосфера, віскі, музика — це не просто стрижка, це ритуал. Після BlackHorse в інше місце не тягне."</p>
-            <cite>Дмитро К. · 1 рік з нами</cite>
-        </blockquote>
-        <blockquote class="review">
-            <p>"Привів батька на гоління небезпечною бритвою. Тепер він ходить сам кожні два тижні. Рекомендую."</p>
-            <cite>Ігор В. · Рекомендація</cite>
-        </blockquote>
-    </div>
-</section>
-
-<!-- FAQ -->
-<section class="sec sec-dark" id="faq">
-    <div class="sec-header" data-reveal>
-        <span class="sec-label">FAQ</span>
-        <h2>Питання</h2>
-    </div>
-    <div class="faq" data-reveal>
-        <details class="faq-item"><summary>Чи потрібно записуватися заздалегідь?</summary><p>Так, ми працюємо тільки за записом. Це гарантує що майстер приділить вам максимум часу без поспіху.</p></details>
-        <details class="faq-item"><summary>Скільки часу займає стрижка?</summary><p>Стрижка — 45 хвилин. Комплекс (стрижка + борода) — 1.5 години. Ми не поспішаємо.</p></details>
-        <details class="faq-item"><summary>Чи можна прийти без запису?</summary><p>Якщо є вільне вікно — так. Але рекомендуємо записуватися, щоб гарантовано отримати час у свого майстра.</p></details>
-        <details class="faq-item"><summary>Які способи оплати?</summary><p>Готівка, картка, Apple Pay, Google Pay. Оплата після послуги.</p></details>
-        <details class="faq-item"><summary>Чи працюєте з дітьми?</summary><p>Так, приймаємо хлопців від 6 років. Дитяча стрижка — 400 ₴.</p></details>
-    </div>
-</section>
-
-<!-- BOOKING -->
-<section class="sec" id="booking">
-    <div class="sec-header" data-reveal>
-        <span class="sec-label">Запис</span>
-        <h2>Записатися онлайн</h2>
+<!-- ===== PREMIUM BOOKING ===== -->
+<section class="section" id="booking">
+    <div class="section__header" data-reveal>
+        <span class="section__tag">Бронювання</span>
+        <h2 class="section__title">Reserve Your Chair</h2>
+        <p class="section__sub">Як бронювання столика в закритому клубі</p>
     </div>
     <div class="booking" data-reveal>
-        <form class="booking-form" id="booking-form">
-            <input type="text" name="name" placeholder="Ваше ім'я" required>
-            <input type="tel" name="phone" placeholder="+380 __ ___ __ __" required>
-            <select name="service" required>
-                <option value="" disabled selected>Оберіть послугу</option>
-                <option>Чоловіча стрижка — 650 ₴</option>
-                <option>Стрижка бороди — 450 ₴</option>
-                <option>Комплекс — 950 ₴</option>
-                <option>Королівське гоління — 550 ₴</option>
-                <option>Камуфляж сивини — 350 ₴</option>
-                <option>Догляд за обличчям — 250 ₴</option>
-            </select>
-            <select name="barber">
-                <option value="" disabled selected>Оберіть майстра</option>
-                <option>Артем Чорний</option>
-                <option>Максим Вовк</option>
-                <option>Денис Король</option>
-                <option>Будь-який вільний</option>
-            </select>
-            <button type="submit" class="btn btn-accent btn-full">Записатися</button>
+        <form class="booking__form" id="booking-form" novalidate>
+            <div class="booking__row">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder=" " required id="bf-name" autocomplete="name">
+                    <label for="bf-name">Ваше ім'я</label>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder=" " required id="bf-phone" autocomplete="tel">
+                    <label for="bf-phone">Телефон</label>
+                </div>
+            </div>
+            <div class="booking__row">
+                <div class="form-group">
+                    <select name="ritual" required id="bf-ritual">
+                        <option value="" disabled selected></option>
+                        <option>The Signature Ritual</option>
+                        <option>Haircut Only</option>
+                        <option>Beard Design</option>
+                        <option>Full Experience</option>
+                    </select>
+                    <label for="bf-ritual">Ритуал</label>
+                </div>
+                <div class="form-group">
+                    <input type="date" name="date" required id="bf-date">
+                    <label for="bf-date" class="label--always-up">Дата</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn--accent btn--full" id="bf-btn">
+                <span class="btn__text">Забронювати</span>
+                <span class="btn__loader" style="display:none;">⟳</span>
+            </button>
+            <div class="booking__success" id="bf-success" style="display:none;">
+                <span>♞</span> Ваше крісло заброньоване. Очікуйте підтвердження.
+            </div>
         </form>
-        <div class="booking-info">
-            <div class="booking-item"><span class="booking-label">Адреса</span><span>вул. Саксаганського, 42, Київ</span></div>
-            <div class="booking-item"><span class="booking-label">Телефон</span><a href="tel:+380441234567">+38 (044) 123-45-67</a></div>
-            <div class="booking-item"><span class="booking-label">Графік</span><span>Пн–Нд: 10:00 – 21:00</span></div>
-            <div class="booking-item"><span class="booking-label">Instagram</span><a href="#">@blackhorse.kyiv</a></div>
+        <div class="booking__info">
+            <div class="booking__detail">
+                <span class="booking__label">Адреса</span>
+                <span>м. Київ, вул. Саксаганського, 44</span>
+            </div>
+            <div class="booking__detail">
+                <span class="booking__label">Телефон</span>
+                <a href="tel:+380671234567">+38 (067) 123-45-67</a>
+            </div>
+            <div class="booking__detail">
+                <span class="booking__label">Графік</span>
+                <span>Пн–Нд: 10:00 – 21:00</span>
+            </div>
+            <div class="booking__detail">
+                <span class="booking__label">Instagram</span>
+                <a href="#">@blackhorse.club</a>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
-    <div class="footer-inner">
-        <a href="#" class="nav-logo">BLACK<span>HORSE</span></a>
-        <p>© 2026 BlackHorse Barbershop. Демонстраційний проєкт.</p>
-        <p class="footer-credit">Розробка: <a href="https://t.me/MarkoStepaniuk" target="_blank">MarkLabs Agency</a></p>
+    <div class="footer__inner">
+        <a href="#" class="footer__logo">BLACK<span>HORSE</span></a>
+        <p class="footer__copy">© 2026 BlackHorse Men's Club. Members only mindset.</p>
+        <p class="footer__credit">Розробка: <a href="https://t.me/MarkoStepaniuk" target="_blank">MarkLabs Agency</a></p>
     </div>
 </footer>
 
 <script>
-document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
-window.addEventListener('scroll',function(){document.getElementById('header').classList.toggle('scrolled',scrollY>50);});
-var burger=document.getElementById('burger'),mob=document.getElementById('mobile-nav');
-burger.onclick=function(){burger.classList.toggle('on');mob.classList.toggle('on');document.body.style.overflow=mob.classList.contains('on')?'hidden':'';};
-function closeMob(){burger.classList.remove('on');mob.classList.remove('on');document.body.style.overflow='';}
-var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('[data-reveal]').forEach(function(el){obs.observe(el);});
-document.getElementById('booking-form').onsubmit=function(e){e.preventDefault();var btn=this.querySelector('button');btn.textContent='✓ Записано! Зателефонуємо.';btn.disabled=true;btn.style.opacity='0.7';};
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+        var t=document.querySelector(this.getAttribute('href'));
+        if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+    });
+});
 
-// Before/After Slider
-(function(){
-var slider=document.getElementById('ba-main');
-if(!slider)return;
-var handle=slider.querySelector('.ba-slider__handle');
-var after=slider.querySelector('.ba-slider__after');
-var dragging=false;
-function setPos(x){var r=slider.getBoundingClientRect();var p=Math.max(0,Math.min(1,(x-r.left)/r.width));handle.style.left=(p*100)+'%';after.style.clipPath='inset(0 0 0 '+(p*100)+'%)';}
-after.style.clipPath='inset(0 0 0 50%)';handle.style.left='50%';
-slider.addEventListener('mousedown',function(e){dragging=true;setPos(e.clientX);});
-window.addEventListener('mousemove',function(e){if(dragging)setPos(e.clientX);});
-window.addEventListener('mouseup',function(){dragging=false;});
-slider.addEventListener('touchstart',function(e){dragging=true;setPos(e.touches[0].clientX);},{passive:true});
-window.addEventListener('touchmove',function(e){if(dragging)setPos(e.touches[0].clientX);},{passive:true});
-window.addEventListener('touchend',function(){dragging=false;});
-})();
+// Header
+window.addEventListener('scroll',function(){
+    document.getElementById('header').classList.toggle('header--scrolled',scrollY>80);
+});
 
-// Floating CTA
-var floatingCta=document.getElementById('floating-cta');
-window.addEventListener('scroll',function(){floatingCta.classList.toggle('show',scrollY>600);});
+// Mobile menu
+var burger=document.getElementById('burger'),mob=document.getElementById('mobile-menu');
+burger.onclick=function(){burger.classList.toggle('active');mob.classList.toggle('active');document.body.style.overflow=mob.classList.contains('active')?'hidden':'';};
+function closeMenu(){burger.classList.remove('active');mob.classList.remove('active');document.body.style.overflow='';}
+
+// Reveal
+var revealObs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('revealed');});
+},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('[data-reveal]').forEach(function(el){revealObs.observe(el);});
+
+// Style Match
+var styles=[
+    {name:'Executive',desc:'Класичний короткий крій з ідеальною укладкою. Для чоловіків, які керують процесами. Чіткі лінії, бездоганна форма, мінімум зайвого.',traits:['Короткий крій','Бічний пробір','Чіткі контури'],img:'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80'},
+    {name:'Classic Gentleman',desc:'Середня довжина з текстурою. Для тих, хто цінує деталі та елегантність у кожному дні. Стиль, що не застаріває.',traits:['Текстурний верх','Плавні переходи','Класичний силует'],img:'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=700&q=80'},
+    {name:'Modern Fade',desc:'Чіткий фейд з контрастом. Сучасний, дерзкий, точний. Для тих, хто йде в ногу з часом і не боїться виділятися.',traits:['High/mid fade','Текстура зверху','Чіткий контур'],img:'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=700&q=80'},
+    {name:'Creative',desc:'Унікальна форма, нестандартні рішення. Для тих, чий стиль — це маніфест. Ми створюємо образ, якого немає в каталогах.',traits:['Авторський крій','Асиметрія','Індивідуальний дизайн'],img:'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=700&q=80'},
+    {name:'Beard Authority',desc:'Борода як головний акцент. Скульптурне оформлення, ідеальні лінії, преміальний догляд. Для тих, хто носить бороду як корону.',traits:['Скульптурна форма','Hot towel shave','Масла та бальзами'],img:'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=700&q=80'}
+];
+var styleOptions=document.querySelectorAll('.style-option');
+styleOptions.forEach(function(opt){
+    opt.addEventListener('click',function(){
+        styleOptions.forEach(function(o){o.classList.remove('active');});
+        this.classList.add('active');
+        var s=styles[this.getAttribute('data-style')];
+        document.getElementById('style-img').src=s.img;
+        document.getElementById('style-badge').textContent=s.name;
+        document.getElementById('style-detail-title').textContent=s.name;
+        document.getElementById('style-detail-desc').textContent=s.desc;
+        var traitsEl=document.querySelector('.style-match__traits');
+        traitsEl.innerHTML='';
+        s.traits.forEach(function(t){
+            var span=document.createElement('span');
+            span.className='style-trait';
+            span.textContent=t;
+            traitsEl.appendChild(span);
+        });
+    });
+});
+
+// Before/After Sliders
+document.querySelectorAll('[data-ba]').forEach(function(slider){
+    var handle=slider.querySelector('[class*="handle"]');
+    var afterEl=slider.querySelector('[class*="after"]');
+    var isDragging=false;
+    function setPos(x){
+        var rect=slider.getBoundingClientRect();
+        var pos=Math.max(0.05,Math.min(0.95,(x-rect.left)/rect.width));
+        handle.style.left=(pos*100)+'%';
+        afterEl.style.clipPath='inset(0 0 0 '+(pos*100)+'%)';
+    }
+    slider.addEventListener('mousedown',function(e){isDragging=true;setPos(e.clientX);e.preventDefault();});
+    window.addEventListener('mousemove',function(e){if(isDragging)setPos(e.clientX);});
+    window.addEventListener('mouseup',function(){isDragging=false;});
+    slider.addEventListener('touchstart',function(e){isDragging=true;setPos(e.touches[0].clientX);},{passive:true});
+    window.addEventListener('touchmove',function(e){if(isDragging)setPos(e.touches[0].clientX);},{passive:true});
+    window.addEventListener('touchend',function(){isDragging=false;});
+    afterEl.style.clipPath='inset(0 0 0 50%)';
+    handle.style.left='50%';
+});
+
+// Counter animation
+var counterAnimated=new Set();
+function animateCounter(el){
+    if(counterAnimated.has(el))return;
+    counterAnimated.add(el);
+    var target=parseInt(el.getAttribute('data-count'));
+    var duration=2000;
+    var start=performance.now();
+    function tick(now){
+        var progress=Math.min((now-start)/duration,1);
+        var eased=1-Math.pow(1-progress,4);
+        var val=Math.floor(eased*target);
+        if(target>=1000)el.textContent=val.toLocaleString('uk-UA');
+        else el.textContent=val;
+        if(progress<1)requestAnimationFrame(tick);
+        else el.textContent=target>=1000?target.toLocaleString('uk-UA'):target;
+    }
+    requestAnimationFrame(tick);
+}
+var counterObs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting)animateCounter(e.target);});
+},{threshold:0.3});
+document.querySelectorAll('[data-count]').forEach(function(el){counterObs.observe(el);});
+
+// Booking form
+document.getElementById('booking-form').addEventListener('submit',function(e){
+    e.preventDefault();
+    var form=this,valid=true;
+    form.querySelectorAll('[required]').forEach(function(input){
+        var group=input.closest('.form-group');
+        if(!input.value.trim()){group.classList.add('error');valid=false;}
+        else{group.classList.remove('error');}
+    });
+    if(!valid)return;
+    var btn=document.getElementById('bf-btn');
+    btn.querySelector('.btn__text').style.display='none';
+    btn.querySelector('.btn__loader').style.display='inline';
+    btn.disabled=true;
+    setTimeout(function(){
+        form.style.display='none';
+        document.getElementById('bf-success').style.display='flex';
+    },1500);
+});
+document.querySelectorAll('.form-group input,.form-group select').forEach(function(el){
+    el.addEventListener('input',function(){this.closest('.form-group').classList.remove('error');});
+});
+
+// Parallax hero
+window.addEventListener('scroll',function(){
+    var img=document.querySelector('.hero__bg-img');
+    if(img)img.style.transform='translateY('+scrollY*0.25+'px) scale(1.1)';
+});
 </script>
 </body>
 </html>
