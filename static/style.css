@@ -497,3 +497,47 @@ p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; }
     .style-match__image { aspect-ratio: 1; }
     .transform-card__slider { aspect-ratio: 4/5; }
 }
+
+
+/* === BlackHorse Trust Upgrade === */
+
+/* Prices */
+.bh-prices { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.5rem; }
+.bh-price { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 1.1rem 1.5rem; border: 1px solid var(--border); border-radius: var(--radius-sm); transition: border-color 0.3s; }
+.bh-price:hover { border-color: rgba(201,148,62,0.3); }
+.bh-price--featured { border-color: var(--accent); background: var(--accent-glow); }
+.bh-price__name { font-size: 0.95rem; font-weight: 600; color: var(--text); }
+.bh-price__desc { font-size: 0.72rem; color: var(--text-muted); width: 100%; margin-top: 0.25rem; }
+.bh-price__val { font-size: 1rem; font-weight: 800; color: var(--accent); }
+
+/* Masters */
+.masters { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.master { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: transform 0.35s var(--ease); }
+.master:hover { transform: translateY(-4px); border-color: var(--border-hover); }
+.master__photo { aspect-ratio: 4/5; overflow: hidden; }
+.master__photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.3); transition: transform 0.6s var(--ease), filter 0.4s; }
+.master:hover .master__photo img { transform: scale(1.05); filter: grayscale(0); }
+.master__info { padding: 1.25rem; }
+.master__info h3 { font-size: 1.05rem; margin-bottom: 0.2rem; }
+.master__spec { display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.15rem; }
+.master__exp { display: block; font-size: 0.72rem; color: var(--text-muted); }
+
+/* Gallery */
+.bh-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+.bh-gallery__item { aspect-ratio: 1; overflow: hidden; border-radius: var(--radius-sm); }
+.bh-gallery__item img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.2); transition: transform 0.5s var(--ease), filter 0.4s; }
+.bh-gallery__item:hover img { transform: scale(1.06); filter: grayscale(0); }
+
+/* Instagram Feed */
+.ig-feed { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.5rem; }
+.ig-item { position: relative; aspect-ratio: 1; overflow: hidden; border-radius: 4px; display: block; }
+.ig-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s var(--ease); }
+.ig-item:hover img { transform: scale(1.08); }
+.ig-item__icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #fff; opacity: 0; font-size: 1.2rem; transition: opacity 0.3s; }
+.ig-item:hover .ig-item__icon { opacity: 1; }
+
+@media (max-width: 768px) {
+    .masters { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
+    .bh-gallery { grid-template-columns: repeat(2, 1fr); }
+    .ig-feed { grid-template-columns: repeat(3, 1fr); }
+}
