@@ -649,10 +649,18 @@ window.addEventListener('scroll',function(){
     bar.innerHTML='<span class="sticky-cta__text">♞ Забронювати крісло</span><a href="#booking" class="sticky-cta__btn" onclick="this.closest(\'.sticky-cta\').style.display=\'none\'">Reserve</a><button class="sticky-cta__close" aria-label="Закрити">✕</button>';
     document.body.appendChild(bar);
     bar.querySelector('.sticky-cta__close').onclick=function(){bar.style.display='none';};
+    var pastHero=false, atTarget=false;
     var heroObs=new IntersectionObserver(function(entries){
-        bar.classList.toggle('sticky-cta--visible',!entries[0].isIntersecting);
+        pastHero=!entries[0].isIntersecting; upd();
     },{threshold:0});
     heroObs.observe(hero);
+    var target=document.getElementById('booking');
+    if(target){
+        new IntersectionObserver(function(entries){
+            atTarget=entries[0].isIntersecting; upd();
+        },{threshold:0.15}).observe(target);
+    }
+    function upd(){ bar.classList.toggle('sticky-cta--visible', pastHero && !atTarget); }
 })();
 </script>
 

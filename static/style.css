@@ -651,3 +651,18 @@ p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; }
     .bh-gallery { grid-template-columns: repeat(2,1fr) !important; }
 }
 /* ===== END MOBILE SAFETY LAYER ===== */
+
+
+/* ===== STICKY CTA OVERLAP FIX ===== */
+@media(max-width:768px){
+    body { padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px)); }
+    .sticky-cta {
+        z-index: 90 !important;
+        padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+    .mobile-menu { z-index: 300 !important; }
+    .header { z-index: 310 !important; }
+    #booking { padding-bottom: 3rem; }
+    .footer, footer { padding-bottom: calc(2rem + 88px); }
+}
+/* ===== END STICKY CTA OVERLAP FIX ===== */
