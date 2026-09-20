@@ -40,8 +40,7 @@
 
 <!-- ===== HERO: CINEMATIC ===== -->
 <section class="hero">
-    <div class="hero__bg">
-        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665571?w=1920&q=85" alt="Man with perfect style" class="hero__bg-img">
+    <div class="hero__bg" role="img" aria-label="BlackHorse Men's Club">
         <div class="hero__overlay"></div>
     </div>
     <div class="hero__content" data-reveal>
@@ -632,11 +631,16 @@ document.querySelectorAll('.form-group input,.form-group select').forEach(functi
     el.addEventListener('input',function(){this.closest('.form-group').classList.remove('error');});
 });
 
-// Parallax hero — desktop only
+// Broken image guard — flag any failed img so no torn-icon shows
+document.querySelectorAll('img').forEach(function(im){
+    im.addEventListener('error',function(){ this.classList.add('img-error'); });
+});
+
+// Parallax hero — desktop only (CSS background)
 window.addEventListener('scroll',function(){
     if(window.innerWidth > 768) {
-        var img=document.querySelector('.hero__bg-img');
-        if(img)img.style.transform='translateY('+scrollY*0.25+'px) scale(1.1)';
+        var bg=document.querySelector('.hero__bg');
+        if(bg)bg.style.backgroundPosition='center '+(scrollY*0.15)+'px';
     }
 });
 
