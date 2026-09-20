@@ -625,3 +625,29 @@ p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; }
     .section__title{font-size:1.65rem !important}
 }
 /* ===== END MOBILE PREMIUM v2 ===== */
+
+
+/* ===== MOBILE SAFETY LAYER (320–414px) ===== */
+@media(max-width:414px){
+    html, body { overflow-x: hidden; max-width: 100vw; }
+    * { min-width: 0; }
+    img, video, iframe { max-width: 100%; height: auto; }
+    [class*="slider"], [class*="gallery"], .bh-gallery, .ig-feed { max-width: 100%; }
+    h1, h2, h3, .hero__title, .section__title { overflow-wrap: break-word; word-break: break-word; }
+    .nav, .section, .hero, .footer { max-width: 100vw; }
+}
+@media(max-width:360px){
+    .hero__title { font-size: 2rem !important; }
+    .section__title { font-size: 1.5rem !important; }
+    .section, .hero { padding-left: 1rem; padding-right: 1rem; }
+    .btn { font-size: 0.8rem; padding: 0.9rem 1.3rem; }
+    .stats { grid-template-columns: repeat(2,1fr) !important; }
+    .ig-feed { grid-template-columns: repeat(3,1fr) !important; }
+}
+@media(max-width:320px){
+    .hero__title { font-size: 1.7rem !important; }
+    .stats { grid-template-columns: 1fr !important; }
+    .masters, .transformations, .ritual, .bh-club { grid-template-columns: 1fr !important; }
+    .bh-gallery { grid-template-columns: repeat(2,1fr) !important; }
+}
+/* ===== END MOBILE SAFETY LAYER ===== */
