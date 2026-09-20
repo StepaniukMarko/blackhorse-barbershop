@@ -562,3 +562,66 @@ p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; }
 
 @media(max-width:1024px){.bh-club{grid-template-columns:1fr;max-width:400px}}
 @media(max-width:768px){.bh-filters{gap:.35rem}.bh-filter{padding:.5rem 1rem}}
+
+/* ===== MOBILE PREMIUM v2 ===== */
+@media(max-width:768px){
+    /* Hero typography */
+    .hero__title{font-size:3rem !important;line-height:1.05 !important;font-weight:900 !important;letter-spacing:-1px}
+    .hero__tagline{font-size:.72rem;letter-spacing:.15em}
+    .hero__cta-btn{width:100%;min-height:52px;font-size:1rem !important;justify-content:center;display:flex;align-items:center}
+
+    /* Disable parallax on mobile — avoid jank */
+    .hero__bg-img{transform:none !important;will-change:auto}
+
+    /* Style Match — horizontal scroll */
+    .style-match{flex-direction:column !important;gap:1.5rem}
+    .style-match__options{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.75rem;padding-bottom:.75rem;-webkit-overflow-scrolling:touch}
+    .style-match__options::-webkit-scrollbar{display:none}
+    .style-option{scroll-snap-align:start;flex:0 0 160px;padding:.85rem 1rem}
+    .style-match__preview{flex-direction:column !important}
+    .style-match__image{height:260px !important}
+
+    /* Transformation — stack cards */
+    .transformations{grid-template-columns:1fr !important;gap:2rem}
+    .transform-card__slider{height:280px}
+    /* Fix BA touch */
+    .transform-card__slider{touch-action:none}
+
+    /* Brotherhood grid */
+    .brotherhood__grid{grid-template-columns:1fr 1fr !important;gap:.5rem}
+    .brotherhood__item--wide{grid-column:1 / -1}
+
+    /* Prices */
+    .bh-prices{gap:.75rem}
+    .bh-price{padding:1rem 1.25rem}
+    .bh-price__name{font-size:.9rem}
+    .bh-price__val{font-size:1.1rem;font-weight:700}
+
+    /* Club tiers — stack */
+    .bh-club{flex-direction:column !important;gap:1rem}
+    .bh-tier{width:100% !important}
+
+    /* Booking form */
+    .booking{flex-direction:column !important;gap:2rem}
+    .booking__row{flex-direction:column !important;gap:.75rem}
+    .btn--accent.btn--full{min-height:52px;font-size:1rem}
+
+    /* Section titles */
+    .section__title{font-size:1.9rem !important;font-weight:900 !important;letter-spacing:-.6px}
+    .section__title br{display:none}
+
+    /* Gallery filter */
+    .bh-filters{overflow-x:auto;display:flex;flex-wrap:nowrap;padding-bottom:.5rem;gap:.5rem;-webkit-overflow-scrolling:touch}
+    .bh-filter{flex-shrink:0;white-space:nowrap}
+
+    /* Masters */
+    .masters{grid-template-columns:1fr !important;gap:1.25rem}
+    .master{display:flex;gap:1rem;align-items:center}
+    .master__photo{width:72px;height:72px;flex-shrink:0;border-radius:50%;overflow:hidden}
+    .master__photo img{width:100%;height:100%;object-fit:cover}
+}
+@media(max-width:390px){
+    .hero__title{font-size:2.5rem !important}
+    .section__title{font-size:1.65rem !important}
+}
+/* ===== END MOBILE PREMIUM v2 ===== */
